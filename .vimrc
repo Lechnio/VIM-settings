@@ -10,7 +10,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'valloric/YouCompleteMe'
 
@@ -30,21 +29,37 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 1 "default 1
+let g:ycm_show_diagnostics_ui = 1 "default 1
+let g:ycm_error_symbol = '>>' "default >>
+let g:ycm_warning_symbol = '>>' "default >>
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_echo_current_diagnostic = 1 "default 1
+let g:ycm_complete_in_comments = 1 "default 0
+let g:ycm_always_populate_location_list = 1 "default 0
+let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
+let g:ycm_complete_in_strings = 1 "default 1
+let g:ycm_collect_identifiers_from_tags_files = 0 "default 0
+let g:ycm_log_level = 'info' "default info (debug, warning, error, critical)
+let g:ycm_goto_buffer_command = 'vertical-split' "default same-buffer (same-buffer, horizontal-split, vertical-split, new-tab)
+let g:ycm_filetype_whitelist = { '*': 1 } " default '*': 1
+let g:ycm_key_invoke_completion = '<C-Space>'
 
-" PLUGINS CONFIG
-let g:syntastic_c_checkers=['make']
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_write = 1
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <F6> :YcmCompleter FixIt<CR>
+nnoremap <F7> :YcmCompleter GoTo<CR>
+
+"
+" VIM common
+"
 
 " No backup files
 set nobackup
+
+" No .viminfo file
+let skip_defaults_vim=1
+set viminfo=""
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -73,8 +88,8 @@ set splitright
 set wildmenu
 set lazyredraw
 set showmatch
-syntax on
 set autoindent
 set title
 set nowrap
+syntax on
 colorscheme kali
