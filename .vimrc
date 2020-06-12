@@ -46,7 +46,6 @@ let g:ycm_goto_buffer_command = 'vertical-split' "default same-buffer (same-buff
 let g:ycm_filetype_whitelist = { '*': 1 } " default '*': 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F6> :YcmCompleter FixIt<CR>
 nnoremap <F7> :YcmCompleter GoTo<CR>
 
@@ -60,6 +59,9 @@ set nobackup
 " No .viminfo file
 let skip_defaults_vim=1
 set viminfo=""
+
+" Clear white spaces
+nnoremap <F5> :%s/\ *$//g \| noh<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
