@@ -7,33 +7,10 @@ import re
 
 BASE_FLAGS = [
         '-Wall',
-        '-Wextra',
-        '-Werror',
-        '-Wno-unused-variable',
-        '-Wno-shadow',
-        '-Wshadow-ivar',
-        '-Wno-switch',
-        '-Wno-parentheses',
-        '-Wbitwise-op-parentheses',
-        '-Wdangling-else',
-        '-Wlogical-not-parentheses',
-        '-Wlogical-op-parentheses',
-        '-Woverloaded-shift-op-parentheses',
-        '-Wparentheses-equality',
-        '-Wshift-op-parentheses',
-        '-Werror=implicit-function-declaration',
-        '-Wno-long-long',
-        '-Wno-variadic-macros',
-        '-fexceptions',
-        '-ferror-limit=10000',
-        '-DNDEBUG',
         '-std=c++11',
         '-xc++',
         '-I/usr/lib/',
         '-I/usr/include/',
-        '-I/home/kali/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/include/clang-c',
-
-        '-DQT_SHARED', '-I/usr/include/qt4', '-I/usr/include/qt4/QtCore'
         ]
 
 SOURCE_EXTENSIONS = [
