@@ -63,10 +63,10 @@ set viminfo=""
 " Clear white spaces
 nnoremap <F5> :%s/\ *$//g \| noh<CR>
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+noremap <Right> <C-W>w
+noremap <Left> <C-W>W
+noremap <Up> <PageUp>
+noremap <Down> <PageDown>
 
 set nowritebackup
 set noswapfile
