@@ -63,6 +63,8 @@ set viminfo=""
 " Clear white spaces
 nnoremap <F5> :%s/\ *$//g \| noh<CR>
 
+noremap 2 <C-W>w
+noremap 1 <C-W>W
 noremap <Right> <C-W>w
 noremap <Left> <C-W>W
 noremap <Up> <PageUp>
@@ -94,4 +96,4 @@ set autoindent
 set title
 set nowrap
 syntax on
-colorscheme kali
+colorscheme eyeSaver
