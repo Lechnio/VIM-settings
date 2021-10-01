@@ -95,5 +95,7 @@ set showmatch
 set autoindent
 set title
 set nowrap
+set visualbell
+set t_vb=
 syntax on
 colorscheme eyeSaver
